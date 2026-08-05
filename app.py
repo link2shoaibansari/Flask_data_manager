@@ -30,9 +30,9 @@ def info():
     info_json = json.dumps(submitted_data, indent=2)
     return render_template('info.html', name=name, info_json=info_json)
 
-@app.route('/history')
-def history():
-    return render_template('history.html', names=submitted_names)
+@app.route('/api')
+def api():
+    return render_template('api.html', names=submitted_names)
 
 if __name__ == '__main__':
     app.run(debug=True)
