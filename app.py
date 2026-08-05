@@ -7,9 +7,7 @@ submitted_names = []
 
 @app.route('/')
 def home():
-    day = datetime.today().strftime('%A')
-    print(day)
-    return render_template('index.html', day=day, current_time=datetime.now().strftime('%H:%M:%S'))
+    return render_template('index.html')
 
 @app.route('/second/<name>')
 def second(name):
