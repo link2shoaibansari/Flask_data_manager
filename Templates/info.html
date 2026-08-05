@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Page</title>
+</head>
+<body>
+    <h1>Info Page</h1>
+    {% if name %}
+        <p>You entered: <strong>{{ name }}</strong></p>
+    {% else %}
+        <p>No name was submitted.</p>
+    {% endif %}
+
+    <h2>Submitted Data</h2>
+    <pre>{{ info_json }}</pre>
+
+    <a class="button" href="{{ url_for('history') }}">See all names</a>
+    <a class="button" href="{{ url_for('home') }}">Go back</a>
+</body>
+<style>
+    body {
+        background-color: #570404;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+    }
+    p, h1, a {
+        color: #b0e591;
+    }
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 20px;
+        background: #333333;
+        border-radius: 5px;
+    }
+</style>
+</html>

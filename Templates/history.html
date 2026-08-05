@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+</head>
+<body>
+    <h1>Submitted Names</h1>
+    {% if names %}
+        <ul>
+            {% for name in names %}
+                <li>{{ name }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No names have been submitted yet.</p>
+    {% endif %}
+    <a class="button" href="{{ url_for('home') }}">Back to form</a>
+</body>
+<style>
+    body {
+        background-color: #570404;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+    }
+    p, h1, li, a {
+        color: #b0e591;
+    }
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 20px;
+        background: #333333;
+        border-radius: 5px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        margin: 5px 0;
+    }
+</style>
+</html>
